@@ -1,3 +1,542 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+/* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */
+
+/* Component-specific stylesheets, if any. */
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+    --beige: rgb(225, 198, 153);
+    --light-beige: rgb(255, 225, 174);
+    --dark-beige: rgb(131, 111, 77);
+    --blue-gray: rgb(129, 156, 167);
+    --gray-accent: rgb(105, 108, 110);
+    --gray-clear: rgba(114, 116, 116, 0.3);
+    --black-clear: rgba(10, 10, 10, 0.7);
+    --white-clear: rgba(201, 201, 201, 0.7);
+    --light-blue: rgb(211, 236, 253);
+    --green: rgb(80, 145, 96);
+    --orange: rgb(248, 121, 62);
+    --purple-clear: rgba(113, 32, 145, 0.6);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+    /* Can alternatively define in html {} or :root {} */
+    /* Define with at least one font name and its related generic family name.*/
+    background-color: rgba(3, 3, 3, 0.897);
+    background-attachment: fixed;
+    /* background-image: url(images/ernie-and-friends-sf-hill-grayscale.jpg); */
+    background-image: url(images/Republic_city.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--beige);
+    font-family: 'Quicksand', sans-serif;
+    margin: auto;
+    padding: .5%;
+    max-width: 90%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+    color: black;
+    background-color: var(--light-beige);
+    padding-inline: 0.5%;
+    margin: 0%;
+    width: fit-content;
+}
+
+main {
+    color: var(--beige);
+    background-color: var(--black-clear);
+    padding: 1%;
+    margin: 0%;
+    border: 0;
+}
+
+h3 {
+    color: var(--green);
+}
+
+section {}
+
+article {}
+
+#topic1 {}
+
+#topic2 {}
+
+div {}
+
+aside {}
+
+footer {
+    color: var(--blue-gray);
+    background-color: var(--black-clear);
+    padding: 0.5%;
+    margin-top: 1%;
+    border: 0
+}
+
+/* ----- Anchors ----- Text links */
+a {
+    color: var(--orange);
+}
+
+a:link {}
+
+a:hover {}
+
+a:active {}
+
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+    text-align: center;
+    margin: 5%;
+}
+
+nav a {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5%;
+    color: var(--beige);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin: 1%;
+    padding: 5%;
+    text-decoration: none;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    background-color: var(--beige);
+    color: black;
+}
+
+/*  -----  Typography  ----- */
+p {}
+
+br {}
+
+ol,
+ul,
+dl {}
+
+li {}
+
+dt {}
+
+dd {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+abbr {}
+
+acronym {}
+
+address {}
+
+blockquote {}
+
+q {}
+
+cite {}
+
+em {}
+
+hr {}
+
+mark {}
+
+s {}
+
+span {}
+
+strong {}
+
+sub {}
+
+sup {}
+
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+
+code {}
+
+kbd {}
+
+samp {}
+
+var {}
+
+del {}
+
+ins {}
+
+/*  ----- Table ----- */
+table {
+    color: var(--beige);
+    background-color: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    padding: 5%;
+    width: 75%;
+    border-collapse: collapse;
+    border: 0px solid var(--black-clear);
+}
+
+caption {
+    color: var(--orange);
+    font-size: 36px;
+    background-color: none;
+    margin: 5%;
+    padding: 0% 1%;
+    border: 0px solid var(--beige);
+}
+
+thead {}
+
+tbody {}
+
+tfoot {}
+
+tr th {
+    color: var(--beige);
+    background-color: var(--black-clear);
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid var(--blue-gray);
+}
+
+tr td {
+    color: var(--beige);
+    background-color: var(--gray-clear);
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid var(--blue-gray);
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--gray-accent)
+}
+
+th {}
+
+td:nth-child(1) {}
+
+colgroup {}
+
+data {}
+
+datalist {}
+
+
+/*  ----- Form ----- */
+form,
+button,
+legend,
+label,
+input,
+select,
+textarea {
+    font-family: 'Quicksand', sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: 110%;
+    padding: 1%;
+    font-family: inherit;
+}
+
+form {}
+
+fieldset {
+    color: var(--beige);
+    margin: 1%;
+    padding: 0% 1%;
+    border: 1px solid var(--beige);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--beige);
+    margin: 1%;
+    padding: 0% 0.5%;
+    border: 0px solid var(--beige);
+}
+
+label {
+    display: block;
+    color: var(--beige);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0%;
+    border: 0px solid var(--beige);
+}
+
+button {
+    color: black;
+    margin: 0% 0% 1%;
+    padding: 0.25% 0.5%;
+    border: 0px solid var(--beige);
+    border-radius: 5%;
+}
+
+input {
+    color: black;
+    margin: 0% 0.5%;
+    padding: 0.25%;
+    border: 0px solid var(--beige);
+}
+
+output {}
+
+meter {}
+
+progress {}
+
+select {
+    color: black;
+    margin: 0%;
+    padding: 0%;
+    border: 0px solid var(--beige);
+}
+
+optgroup {}
+
+option {}
+
+textarea {
+    color: black;
+    margin: 0%;
+    padding: 0%;
+    border: 0px solid var(--beige);
+    letter-spacing: 0.5px;
+    width: 50%;
+    height: 50px;
+}
+
+:focus {
+    background-color: var(--light-blue);
+}
+
+*::placeholder {
+    color: var(--black-clear)
+}
+
+*:required {
+    border: 0.5px solid green;
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+input:invalid {
+    border: 0.5px solid red;
+}
+
+input:valid {
+    border: 0.5px solid green;
+}
+
+/* ----- Media ----- */
+figure {}
+
+figcaption {}
+
+figure img {}
+
+svg {}
+
+picture {}
+
+source {}
+
+iframe {}
+
+video {}
+
+audio {}
+
+embed {}
+
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/* .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.gallery figure {
+    color: var(--blue-gray);
+    width: 40em;
+    margin: 1%;
+    padding: 2%;
+}
+
+.gallery img {
+    color: var(--blue-gray);
+    width: 100%;
+}
+
+.gallery figcaption {
+    color: var(--beige);
+    display: block;
+    padding: 1%;
+    text-align: center;
+} */
+
+.price {
+    text-align: right;
+}
+
+.productselection {
+    border: 0px solid var(--beige);
+    background-color: var(--black-clear);
+}
+
+.localnav {
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+}
+
+.localnav a {
+    background-color: var(--gray-clear);
+    color: var(--beige);
+    margin: 1%;
+}
+
+.homenav {
+    text-align: center;
+    margin: 5%;
+}
+
+.homenav a {
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 5%;
+    color: var(--beige);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin: 1%;
+    padding: 5%;
+    text-decoration: none;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    background-color: var(--beige);
+    color: black;
+}
+
+.staffbuttonsection {
+    text-align: center;
+}
+
+.staffbutton {
+    padding: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 0%;
+}
+
+.floatright {}
+
+.floatleft {}
+
+.center-middle {}
+
+.ten {}
+
+.twenty {}
+
+.thirty {}
+
+.forty {}
+
+.fifty {}
+
+.sixty {}
+
+.seventy {}
+
+.eighty {}
+
+.radius {}
+
+.circle {}
+
+.boxshadow {}
+
+.tshadow {}
+
+.gradient {}
+
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+/*
+
 .App {
   text-align: center;
 }
@@ -36,3 +575,5 @@
     transform: rotate(360deg);
   }
 }
+
+*/
